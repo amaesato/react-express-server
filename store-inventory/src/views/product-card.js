@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-
-import styles from "../App.css";
+import React, { Component } from 'react';
 
 class ProductCard extends Component {
   constructor(props) {
@@ -10,9 +8,9 @@ class ProductCard extends Component {
       editProduct: {
         name: this.props.product.name,
         price: this.props.product.price,
-        qty: this.props.product.qty
+        qty: this.props.product.qty,
       },
-      isEdit: false
+      isEdit: false,
     };
   }
 
@@ -22,7 +20,7 @@ class ProductCard extends Component {
 
   handleOnEdit = (id, val) => {
     this.setState({
-      editProduct: { ...this.state.editProduct, [id]: val }
+      editProduct: { ...this.state.editProduct, [id]: val },
     });
   };
 
@@ -32,9 +30,10 @@ class ProductCard extends Component {
     return (
       <div
         style={{
-          backgroundColor: "grey",
-          margin: "10px",
-          padding: "5px"
+          backgroundColor: 'grey',
+          margin: '1rem',
+          padding: '1rem',
+          borderRadius: '0.5rem',
         }}
       >
         <p>name: {product.name}</p>
@@ -49,7 +48,7 @@ class ProductCard extends Component {
               id="productName"
               type="text"
               value={editProduct.name}
-              onChange={e => this.handleOnEdit("name", e.target.value)}
+              onChange={e => this.handleOnEdit('name', e.target.value)}
             />
             <br />
             <label>Price</label>
@@ -58,7 +57,7 @@ class ProductCard extends Component {
               type="number"
               step="0.01"
               value={editProduct.price}
-              onChange={e => this.handleOnEdit("price", e.target.value)}
+              onChange={e => this.handleOnEdit('price', e.target.value)}
             />
             <br />
             <label>Qauntity</label>
@@ -66,7 +65,7 @@ class ProductCard extends Component {
               id="qty"
               type="number"
               value={editProduct.qty}
-              onChange={e => this.handleOnEdit("qty", e.target.value)}
+              onChange={e => this.handleOnEdit('qty', e.target.value)}
             />
             <button
               onClick={() => {

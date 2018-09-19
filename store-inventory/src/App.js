@@ -50,7 +50,7 @@ class App extends Component {
           <h2>Add Product</h2>
           <AddProduct addNewProduct={this.addNewProduct} />
         </header>
-        <div style={{ display: "flex" }}>
+        <div className="products-wrapper">
           {products &&
             products.map((product, i) => (
               <ProductCard

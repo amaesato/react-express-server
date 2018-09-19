@@ -2,12 +2,12 @@
 
 ## Initial and Server setup
 
-1. `mkdir react-and-server`
-2. `cd react-and-server`
-3. `npm init -y`, -y flag skips questions.
-4. `npm install --save express body-parser`
-5. `touch .gitignore`, add node_modules to that file
-6. `mkdir server` -> `touch server/index.js` -> `touch server/controller.js`
+1. `$ mkdir react-and-server`
+2. `$ cd react-and-server`
+3. `$ npm init -y`, -y flag skips questions.
+4. `$ npm install --save express body-parser`
+5. `$ touch .gitignore`, add node_modules to that file
+6. `$ mkdir server` -> `$ touch server/index.js` -> `$ touch server/controller.js`
 7. In index.js, add your requires, use, and listen
 
 ```
@@ -51,5 +51,10 @@ app.delete("/api/store/:sku", bc.delete);
 ## React app setup
 
 1. In the root folder of `react-and-server`, run `create-react-app client`.
-2. `cd client` -> in package.json add your proxy
-3. In App.js add `componentDidMount`
+2. `$ cd client` -> in package.json add your proxy
+3. `$ npm start`
+4. `$ npm install axios`
+5. In App.js import axios.
+6. Fetch data to display on page load:
+
+- In `componentDidMount` use `axios.get` and `setState`
